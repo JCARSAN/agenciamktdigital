@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Digital</title>
-
+    <link rel="stylesheet" href="./sources/css/site.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11183473565"></script>
     <script>
@@ -15,8 +15,65 @@
 
         gtag('config', 'AW-11183473565');
     </script>
+    <!-- Event snippet for Visitas_site conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-11183473565/5eg_CLbzsqEYEJ2H2dQp'});
+    </script>
+    <!-- Event snippet for Visitas_site conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(send_to,url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': send_to,
+            'event_callback': callback
+        });
+        return false;
+        }
+    </script>
 </head>
 <body>
-    <h1>Aumente a presença online da sua empresa com anúncios no Google, Facebook e Instagram.</h1>
+    <header class="flex-container-column"> 
+        <nav>
+            <ul class="flex-container-row menu-links container">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Saiba Mais</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Para pequenos negócios</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="container flex-container-column justify-content-space-between">
+            <h1>
+                <span>Aumente</span> a presença da sua empresa <br/>
+                na internet com <span>anúncios</span> online.
+            </h1>
+            <!-- <img src="./sources/img/web-design-pagamento-fundo_1300-135.avif" alt=""> -->
+            <a href="#" class="btn-header">Conheça meus serviços</a>
+        </div>
+    </header>
+    <main>
+        <section class="white-back">
+            <div class="section-wrapper">
+                <h2>Alcance mais clientes com anúncios online.</h2>
+                <div class="flex-container-row justify-content-space-between align-items-center">
+                    <div class="flex-container-column">
+                        <p>A internet é o lugar mais frequentado do mundo e cada vez pessoas estão fazendo suas compras online.</p>
+                        <p>Não perca a oportunidade de ter seus produtos e serviços anunciados no Google, Facebook e Instagram.</p>
+                        <p>Preços a partir de <span>R$ X</span>.</p>
+                        <a href="#" class="btn-buget">Quero anunciar minha empresa na internet</a>
+                    </div>
+                    <img src="./sources/img/Wavy_Bus-27_Single-07.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="blue-dark-back">
+
+        </section>
+    </main>
 </body>
 </html>
